@@ -1,0 +1,10 @@
+--- gnome-shell-system-monitor-next-applet-3.27/Makefile~	2025-03-19 21:22:01.000000000 +0100
++++ gnome-shell-system-monitor-next-applet-3.27/Makefile	2025-06-24 00:45:39.639998207 +0200
+@@ -156,7 +156,6 @@
+ 	$(Q)cp $(VV) -r $(UUID)/locale/* _build/locale/
+ 	$(Q)mkdir -p _build/schemas
+ 	$(Q)cp $(VV) $(UUID)/schemas/*.xml _build/schemas/
+-	$(Q)cp $(VV)  $(UUID)/schemas/gschemas.compiled _build/schemas/
+ 	$(Q)sed -i 's/"version": -1/"version": "$(VERSION)"/'  _build/metadata.json;
+ 	$(call msg,$@,OK)
+ 
