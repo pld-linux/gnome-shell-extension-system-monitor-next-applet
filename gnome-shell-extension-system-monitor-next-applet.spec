@@ -1,7 +1,7 @@
 Summary:	GNOME Shell System Monitor NEXT Extension
 Name:		gnome-shell-extension-system-monitor-next-applet
 Version:	3.27
-Release:	1
+Release:	2
 # The entire source code is GPLv3+ except convenience.js, which is BSD
 License:	GPL-3.0-or-later AND BSD-3-Clause
 Source0:	https://github.com/mgalgs/gnome-shell-system-monitor-next-applet/archive/v%{version}/%{name}-%{version}.tar.gz
@@ -42,6 +42,9 @@ install -d $RPM_BUILD_ROOT%{_datadir}/glib-2.0/schemas
 %{__mv} $RPM_BUILD_ROOT%{_datadir}{/gnome-shell/extensions/%{extuuid},}/locale
 
 %{__rm} $RPM_BUILD_ROOT%{_datadir}/gnome-shell/extensions/%{extuuid}/README
+
+%{__mv} $RPM_BUILD_ROOT%{_localedir}/es{_ES,}
+%{__mv} $RPM_BUILD_ROOT%{_localedir}/nl{_NL,}
 
 %find_lang %{name} --all-name
 
